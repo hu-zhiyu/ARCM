@@ -1,4 +1,5 @@
-# Attention-based relation and context modeling for point cloud semantic segmentation
+# Attention-based relation and context modeling for point cloud semantic segmentation (SMI 2020)
+Zhiyu Hu, Dongbo Zhang, Shuai Li, Hong Qin
 
 ## Overview
 <p align="center"> <img src="figs/network_architecture.png" width="75%"> </p>
