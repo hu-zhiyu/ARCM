@@ -5,7 +5,6 @@ import numpy as np
 import tensorflow as tf
 import socket
 from scipy import stats
-from IPython import embed
 import provider
 from model import *
 from test_utils import *

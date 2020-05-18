@@ -20,16 +20,33 @@ cd ..
 ```
 
 ## Usage
-
+* Create Conda Environment
+``` bash
+  conda create -n ARCM python=2.7
+  source activate ARCM
+```
+* Clone the Repository
+``` bash
+git clone https://github.com/hu-zhiyu/ARCM && cd ARCM
+```
+* Install Required Dependencies
+``` bash
+pip install -r requirements.txt
+```
 * Compile TF Operators
-
-  Set up environment first and then compile tf_compile_all.sh in /tf_ops. Please refer to [PointNet++](https://github.com/charlesq34/pointnet2) if you encounter any problems at this step. 
+``` bash
+cd tf_ops
+sh tf_compile_all.sh
+```  
+Make sure no errors generated and refer to [PointNet++](https://github.com/charlesq34/pointnet2) when encountering any problems at this step. 
 
 * Training, Testing and Evaluation
 ``` bash
 cd models/ASIS/
 sh train.sh 5
 ```
+
+## S3DIS Area 5 Quantitative Results
 
 ## S3DIS Visual Results
 <p align="center"> <img src="figs/s3dis_vis.png" width="75%"> </p>
