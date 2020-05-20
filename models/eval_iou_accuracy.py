@@ -53,6 +53,12 @@ for i in range(num_room):
         positive_classes[pred_l] += 1
         true_positive_classes[gt_l] += int(gt_l==pred_l)
 
+LOG_FOUT = open(os.path.join('results_a5.txt'), 'w')
+def log_string(out_str):
+    LOG_FOUT.write(out_str+'\n')
+    LOG_FOUT.flush()
+    print(out_str)
+
 # semantic results
 iou_list = []
 for i in range(NUM_CLASSES):
@@ -61,7 +67,6 @@ for i in range(NUM_CLASSES):
     iou_list.append(iou)
 
 log_string('Semantic Segmentation oAcc: {}'.format(sum(true_positive_classes)/float(sum(positive_classes))))
-#log_string('Semantic Segmentation Acc: {}'.format(true_positive_classes / gt_classes))
 log_string('Semantic Segmentation mAcc: {}'.format(np.mean(true_positive_classes / gt_classes)))
 log_string('Semantic Segmentation IoU: {}'.format(iou_list))
 log_string('Semantic Segmentation mIoU: {}'.format(1.*sum(iou_list)/NUM_CLASSES))

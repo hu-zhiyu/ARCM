@@ -1,1 +1,0 @@
-Namespace(batch_size=12, decay_rate=0.5, decay_step=300000, gpu=0, input_list='data/train_hdf5_file_list_woArea5.txt', learning_rate=0.001, log_dir='log5', max_epoch=100, momentum=0.9, num_point=4096, optimizer='adam', restore_model='None')

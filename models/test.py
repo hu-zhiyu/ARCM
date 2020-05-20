@@ -5,9 +5,10 @@ import numpy as np
 import tensorflow as tf
 import socket
 from scipy import stats
+from IPython import embed
 import provider
 from model import *
-from test_utils import *
+# from test_utils import *
 import os
 import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -119,7 +120,7 @@ def test():
 
             fout_out_filelist.write(out_data_label_filename+'\n')
 
-            cur_data, cur_sem, _ = indoor3d_util.room2blocks_wrapper_normalized(room_path, NUM_POINT, block_size=1.0, stride=0.9,
+            cur_data, cur_sem, _ = indoor3d_util.room2blocks_wrapper_normalized(room_path, NUM_POINT, block_size=1.0, stride=0.5,
                                                  random_sample=False, sample_num=None)
             cur_data = cur_data[:, 0:NUM_POINT, :]
             cur_sem = np.squeeze(cur_sem)
