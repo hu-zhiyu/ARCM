@@ -51,7 +51,7 @@ python eval_iou_accuracy.py
 ## S3DIS Visual Results
 <p align="center"> <img src="figs/s3dis_vis.png" width="75%"> </p>
 
-## Acknowledgemets
+## Acknowledgements
 This code largely benefits from following repositories:
 * [PointNet++](https://github.com/charlesq34/pointnet2)
 * [ASIS](https://github.com/WXinlong/ASIS)
